@@ -1,5 +1,7 @@
 <?php
 
+require_once ("../data/DataManager.php");
+
 class Penalty
 {
     private $penalties = array(
@@ -9,7 +11,7 @@ class Penalty
 
     public function getAllPenalties()
     {
-        return $this->penalties;
+        return $this->getDataManager()->readPenalties();
     }
 
     public function getPenalty($id)
@@ -19,6 +21,11 @@ class Penalty
         );
 
         return $penalty;
+    }
+
+    private function getDataManager()
+    {
+        return new DataManager();
     }
 }
 

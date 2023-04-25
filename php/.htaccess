@@ -3,5 +3,9 @@ Options +FollowSymlinks
 RewriteEngine on
 
 # map neat URL to internal URL
-RewriteRule ^penalty/list/([0-9]+) api/RestController.php?view=single&id=$1 [nc,qsa]
-RewriteRule ^penalty/list api/RestController.php?view=all [nc,qsa]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-s
+
+RewriteRule ^penaltyRegistration/list/([0-9]+) api/RestController.php?view=single&id=$1 [nc,qsa]
+RewriteRule ^penaltyRegistration/list api/RestController.php?view=all [nc,qsa]
+#RewriteRule ^penalty/add/ api/RestController.php?view=add [nc,p]

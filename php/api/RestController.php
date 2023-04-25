@@ -1,6 +1,6 @@
 <?php
 
-require_once ("PenaltyRestHandler.php");
+require_once ("PenaltyRegistrationRestHandler.php");
 
 $view = "";
 if (isset($_GET["view"]))
@@ -13,19 +13,16 @@ if (isset($_GET["view"]))
 switch ($view) {
 
     case "all":
-        // to handle REST Url /penalty/list/
-        $penaltyRestHandler = new PenaltyRestHandler();
-        $penaltyRestHandler->getAllPenalties();
+        $penaltyRestHandler = new PenaltyRegistrationRestHandler();
+        PenaltyRegistrationRestHandler::getAllPenaltyRegistrations();
         break;
 
     case "single":
-        // to handle REST Url /penalty/show/<id>/
-        $penaltyRestHandler = new PenaltyRestHandler();
-        $penaltyRestHandler->getPenalty($_GET["id"]);
+        PenaltyRegistrationRestHandler::getPenaltyRegistration($_GET["id"]);
         break;
 
-    case "":
-        // 404 - not found;
+    case "add":
+        PenaltyRegistrationRestHandler::addPenaltyRegistration(file_get_contents('php://input'));
         break;
 }
 ?>

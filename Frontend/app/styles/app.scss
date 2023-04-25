@@ -1,0 +1,41 @@
+@import 'components/dq-form';
+@import 'components/footer';
+@import 'components/header';
+@import 'general/radiobuttons';
+
+/* Resetting styles and setting up the fonts */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Aboreto', cursive;
+}
+
+html {
+    height: 100%;
+}
+
+/* Setting up the body */
+body {
+    background-color: #f8f9fa;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Setting up the main */
+main {
+    margin-top: 2rem;
+    border: .5rem solid #f18701;
+    padding: 2rem;
+    height: 100%;
+}
+
+
+
+

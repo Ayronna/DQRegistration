@@ -1,0 +1,21 @@
+/* Setting up the form */
+
+.form{
+    display: flex;
+    flex-direction: column;
+    &-radio-format{
+        width: 250px;
+        padding: 1rem;
+    
+        &-input{
+            padding: .5rem;
+            display: flex;
+
+            & label {
+                margin-left: .5rem;
+            }
+        }
+    }
+
+
+}

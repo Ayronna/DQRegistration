@@ -1,0 +1,73 @@
+<form class="form">
+    <div class="form-radio-format">
+        <label>Formaat</label>
+             <div class="form-radio-format-input">
+            <input type="radio" id="standard" name="format" value="Standard">
+            <label for="standard" class="form-label">Standard</label>
+        </div>
+        <div class="form-radio-format-input">
+            <input type="radio" id="modern" name="format" value="Modern">
+            <label for="modern" class="form-label">Modern</label>
+        </div>
+        <div class="form-radio-format-input">
+            <input type="radio" id="legacy" name="format" value="Legacy">
+            <label for="legacy" class="form-label">Legacy</label>
+        </div>
+        <div class="form-radio-format-input">
+            <input type="radio" id="draft" name="format" value="Draft">
+            <label for="draft" class="form-label">Draft</label>
+        </div>
+    </div>
+
+    <div class="form-dropdown-round">
+        <label for='round' class='form-label'>Select the current round:</label>
+        <select name="round">
+            <option selected value="...">...</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+    </div>
+
+    <div class="form-input-table">
+        <label for='description' class='form-label'>Table number:</label>
+        <input type="text" name='tableNumber'>
+    </div>
+
+    <div class="form-input-playername">
+        <label for='playerName' class='form-label'>Player name:</label>
+        <input name='playerName' type="text">
+    </div>
+
+    <div class="form-dropdown-infraction">
+        <label for='round' class='form-label'>Infraction:</label>
+        <select name="round">
+            <option selected value="...">...</option>
+            {{#each this._allInfractions as |infraction|}}
+            <option value={{infraction}} name="infraction">{{infraction.error}}</option>
+            {{/each}}
+           
+        </select>
+    </div>
+
+    <div class="form-dropdown-penalty">
+        <label for='round' class='form-label'>Penalty:</label>
+        <select name="round">
+            <option selected value="...">...</option>
+            {{#each this._allPenalties as |penalty|}}
+            <option value={{penalty}} name="penalty">{{penalty.penalty}}</option>
+            {{/each}}
+        </select>
+    </div>
+    
+    <div class="form-input-description">
+        <label for='description' class='form-label'>Please provide a clear description:</label>
+        <input type="text" name='description'>
+    </div>
+        
+    <div class="form-input-judge">
+        <label for='judge' class='form-label'></label>
+        <input type="text" name='judge'>
+    </div>
+        
+</form>

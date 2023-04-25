@@ -1,0 +1,12 @@
+/* Setting up the footer */
+footer {
+    display: flex;
+    color: #6c757d;
+    background-color: #ffd23f;
+    width: 100%;
+
+    & p {
+        margin: auto;
+        padding: 1rem;
+    }
+}

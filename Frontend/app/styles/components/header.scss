@@ -1,0 +1,24 @@
+/* Styling the Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f18701;
+    padding: 1rem;
+    border-radius: 2rem;
+
+    & div h1 {
+        margin: 1rem;
+    }
+
+    & div h3 {
+        margin: 1rem;
+    }
+
+    & img {
+        width: 150px;
+    }
+}
+/* Currently there is no navigation needed, this might change in the future */
+nav{
+    color:black;
+}

@@ -1,0 +1,14 @@
+{
+	"penalties": [
+		{
+			"penaltyId" : "1",
+			"player": "Wytze",
+			"tableNumber": "1"
+		}, 
+		{
+			"penaltyId" : "2",
+			"player": "Timon",
+			"tableNumber": "1"
+		}
+	]
+}

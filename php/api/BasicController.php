@@ -1,7 +1,6 @@
 <?php
-require_once ("SimpleRest.php");
 
-class BasicController extends SimpleRest
+class BasicController
 {
     public function encodeJson($responseData)
     {

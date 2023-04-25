@@ -1,4 +1,5 @@
 <?php
+
 require_once ("PenaltyRestHandler.php");
 
 $view = "";
